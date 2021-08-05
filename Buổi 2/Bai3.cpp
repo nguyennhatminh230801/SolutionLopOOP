@@ -6,7 +6,7 @@ class GOODS//Hang Hoa
     char goodsCode[15];//Ma Hang
     char goodsName[50];//Ten Hang
     char dateOfGoodsReceipt[20]; //Ngay Nhap Hang
-    char Manufacturer[50];//Nha San Xuat
+    char manufacturer[50];//Nha San Xuat
     float goodsPrice; //Don Gia
     float goodsAmount; // So Luong
 
@@ -23,7 +23,7 @@ GOODS::GOODS()
     strcpy(goodsCode, "");
     strcpy(goodsName, "");
     strcpy(dateOfGoodsReceipt, "");
-    strcpy(Manufacturer, "");
+    strcpy(manufacturer, "");
     goodsPrice = 0;
     goodsAmount = 0;
 }
@@ -33,7 +33,7 @@ GOODS::GOODS(char GoodsCode[], char GoodsName[], char DateOfGoodsReceipt[], char
     strcpy(this->goodsCode, GoodsCode);
     strcpy(this->goodsName, GoodsName);
     strcpy(this->dateOfGoodsReceipt, DateOfGoodsReceipt);
-    strcpy(this->Manufacturer, Manufacturer);
+    strcpy(this->manufacturer, Manufacturer);
     this->goodsPrice = GoodsPrice;
     this->goodsAmount = GoodsAmount;
 }
@@ -43,7 +43,7 @@ GOODS::~GOODS()
     strcpy(goodsCode, "");
     strcpy(goodsName, "");
     strcpy(dateOfGoodsReceipt, "");
-    strcpy(Manufacturer, "");
+    strcpy(manufacturer, "");
     goodsPrice = 0;
     goodsAmount = 0;
 }
@@ -64,7 +64,7 @@ void GOODS::Input()
 
     cout << "Nhap Hang San Xuat: ";
     fflush(stdin);
-    gets(Manufacturer);
+    gets(manufacturer);
 
     cout << "Nhap Don Gia: ";
     cin >> goodsPrice;
@@ -78,7 +78,7 @@ void GOODS::Output()
     cout << setw(15) << left << goodsCode
          << setw(50) << left << goodsName
          << setw(20) << left << dateOfGoodsReceipt
-         << setw(50) << left << Manufacturer
+         << setw(50) << left << manufacturer
          << setw(15) << left << setprecision(15) << goodsPrice
          << setw(15) << left << setprecision(15) << goodsAmount
          << setw(15) << left << setprecision(15) << goodsPrice * goodsAmount << endl;

@@ -16,7 +16,8 @@ class FRACTION //Phan So
 
 FRACTION::FRACTION()
 {
-    a = b = 0;
+    a = 0;
+    b = 1;
 }
 
 FRACTION::FRACTION(float a, float b)
@@ -27,7 +28,8 @@ FRACTION::FRACTION(float a, float b)
 
 FRACTION::~FRACTION()
 {
-    a = b = 0;
+    a = 0;
+    b = 1;
 }
 
 void FRACTION::Input()
