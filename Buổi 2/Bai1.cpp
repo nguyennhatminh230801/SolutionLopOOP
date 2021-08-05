@@ -9,9 +9,9 @@ class QUADRATIC_FORMULA //Phuong trinh bac 2
         QUADRATIC_FORMULA();
         QUADRATIC_FORMULA(float a, float b, float c);
         ~QUADRATIC_FORMULA();
-        void INPUT(); //Nhap
-        void OUTPUT(); //Xuat
-        void SOLVE(); //Giai
+        void Input(); //Nhap
+        void Output(); //Xuat
+        void Solve(); //Giai
 };
 
 QUADRATIC_FORMULA::QUADRATIC_FORMULA()
@@ -31,7 +31,7 @@ QUADRATIC_FORMULA::~QUADRATIC_FORMULA()
     a = b = c = 0;
 }
 
-void QUADRATIC_FORMULA::INPUT()
+void QUADRATIC_FORMULA::Input()
 {
     cout << "Nhap So A: ";
     cin >> a;
@@ -41,12 +41,12 @@ void QUADRATIC_FORMULA::INPUT()
     cin >> c;
 }
 
-void QUADRATIC_FORMULA::OUTPUT()
+void QUADRATIC_FORMULA::Output()
 {
     cout << a << "x^2" << (b >= 0 ? "+" : "-") << abs(b) << "x" << (c >= 0 ? "+" : "-") << abs(c) << "=0" << endl; 
 }
 
-void QUADRATIC_FORMULA::SOLVE()
+void QUADRATIC_FORMULA::Solve()
 {
     if(a == 0)
     {
@@ -90,19 +90,19 @@ int main()
     QUADRATIC_FORMULA P(2, 4, 2), Q;
 
     cout << "Phuong Trinh P: ";
-    P.OUTPUT();
+    P.Output();
 
     cout << "Ket Qua Phuong Trinh P la: ";
-    P.SOLVE();
+    P.Solve();
 
     cout << "Nhap Phuong Trinh Q: " << endl;
-    Q.INPUT();
+    Q.Input();
 
     cout << "Phuong Trinh Q: ";
-    Q.OUTPUT();
+    Q.Output();
 
     cout << "Ket Qua Phuong Trinh Q la: ";
-    Q.SOLVE();
+    Q.Solve();
 
     return 0;
 }

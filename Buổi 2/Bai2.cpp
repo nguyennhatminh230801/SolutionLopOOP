@@ -9,9 +9,9 @@ class FRACTION //Phan So
         FRACTION();
         FRACTION(float a, float b);
         ~FRACTION();
-        void INPUT();//Nhap
-        void OUTPUT();//Xuat
-        void SIMPLIFY_FRACTION();//Rut gon phan so
+        void Input();//Nhap
+        void Output();//Xuat
+        void Simplify_Fraction();//Rut gon phan so
 };
 
 FRACTION::FRACTION()
@@ -30,7 +30,7 @@ FRACTION::~FRACTION()
     a = b = 0;
 }
 
-void FRACTION::INPUT()
+void FRACTION::Input()
 {
     cout << "Nhap Tu So: ";
     cin >> a;
@@ -39,7 +39,7 @@ void FRACTION::INPUT()
     cin >> b;
 }
 
-void FRACTION::OUTPUT()
+void FRACTION::Output()
 {
     if(b == 0)
     {
@@ -51,7 +51,7 @@ void FRACTION::OUTPUT()
     }
 }
 
-void FRACTION::SIMPLIFY_FRACTION()
+void FRACTION::Simplify_Fraction()
 {
     float temp_a = a, temp_b = b;
 
@@ -75,14 +75,14 @@ int main()
     FRACTION P(2, 4), Q;
 
     cout << "Phan So P: ";
-    P.OUTPUT();
+    P.Output();
 
     // cout << "Nhap Phan So Q: " << endl;
     // Q.INPUT();
 
-    Q.SIMPLIFY_FRACTION();
+    Q.Simplify_Fraction();
 
     cout << "Phan So Q sau rut gon: ";
-    Q.OUTPUT();
+    Q.Output();
     return 0;
 }

@@ -3,85 +3,85 @@ using namespace std;
 
 class GOODS//Hang Hoa
 {
-    char GoodsCode[15];//Ma Hang
-    char GoodsName[50];//Ten Hang
-    char DateOfGoodsReceipt[20]; //Ngay Nhap Hang
+    char goodsCode[15];//Ma Hang
+    char goodsName[50];//Ten Hang
+    char dateOfGoodsReceipt[20]; //Ngay Nhap Hang
     char Manufacturer[50];//Nha San Xuat
-    float GoodsPrice; //Don Gia
-    float GoodsAmount; // So Luong
+    float goodsPrice; //Don Gia
+    float goodsAmount; // So Luong
 
     public:
         GOODS();
         GOODS(char GoodsCode[], char GoodsName[], char DateOfGoodsReceipt[], char Manufacturer[], float GoodsPrice, float GoodsAmount);
         ~GOODS();
-        void INPUT();
-        void OUTPUT();
+        void Input();
+        void Output();
 };
 
 GOODS::GOODS()
 {
-    strcpy(GoodsCode, "");
-    strcpy(GoodsName, "");
-    strcpy(DateOfGoodsReceipt, "");
+    strcpy(goodsCode, "");
+    strcpy(goodsName, "");
+    strcpy(dateOfGoodsReceipt, "");
     strcpy(Manufacturer, "");
-    GoodsPrice = 0;
-    GoodsAmount = 0;
+    goodsPrice = 0;
+    goodsAmount = 0;
 }
 
 GOODS::GOODS(char GoodsCode[], char GoodsName[], char DateOfGoodsReceipt[], char Manufacturer[], float GoodsPrice, float GoodsAmount)
 {
-    strcpy(this->GoodsCode, GoodsCode);
-    strcpy(this->GoodsName, GoodsName);
-    strcpy(this->DateOfGoodsReceipt, DateOfGoodsReceipt);
+    strcpy(this->goodsCode, GoodsCode);
+    strcpy(this->goodsName, GoodsName);
+    strcpy(this->dateOfGoodsReceipt, DateOfGoodsReceipt);
     strcpy(this->Manufacturer, Manufacturer);
-    this->GoodsPrice = GoodsPrice;
-    this->GoodsAmount = GoodsAmount;
+    this->goodsPrice = GoodsPrice;
+    this->goodsAmount = GoodsAmount;
 }
 
 GOODS::~GOODS()
 {
-    strcpy(GoodsCode, "");
-    strcpy(GoodsName, "");
-    strcpy(DateOfGoodsReceipt, "");
+    strcpy(goodsCode, "");
+    strcpy(goodsName, "");
+    strcpy(dateOfGoodsReceipt, "");
     strcpy(Manufacturer, "");
-    GoodsPrice = 0;
-    GoodsAmount = 0;
+    goodsPrice = 0;
+    goodsAmount = 0;
 }
 
-void GOODS::INPUT()
+void GOODS::Input()
 {
     cout << "Nhap Ma Hang: ";
     fflush(stdin);
-    gets(GoodsCode);
+    gets(goodsCode);
 
     cout << "Nhap Ten Hang: ";
     fflush(stdin);
-    gets(GoodsName);
+    gets(goodsName);
 
     cout << "Nhap Ngay Nhap Hang: ";
     fflush(stdin);
-    gets(DateOfGoodsReceipt);
+    gets(dateOfGoodsReceipt);
 
     cout << "Nhap Hang San Xuat: ";
     fflush(stdin);
     gets(Manufacturer);
 
     cout << "Nhap Don Gia: ";
-    cin >> GoodsPrice;
+    cin >> goodsPrice;
 
     cout << "Nhap So Luong: ";
-    cin >> GoodsAmount;
+    cin >> goodsAmount;
 }
 
-void GOODS::OUTPUT()
+void GOODS::Output()
 {
-    cout << setw(15) << left << GoodsCode
-         << setw(50) << left << GoodsName
-         << setw(20) << left << DateOfGoodsReceipt
+    cout << setw(15) << left << goodsCode
+         << setw(50) << left << goodsName
+         << setw(20) << left << dateOfGoodsReceipt
          << setw(50) << left << Manufacturer
-         << setw(15) << left << setprecision(15) << GoodsPrice
-         << setw(15) << left << setprecision(15) << GoodsAmount
-         << setw(15) << left << setprecision(15) << GoodsPrice * GoodsAmount << endl;
+         << setw(15) << left << setprecision(15) << goodsPrice
+         << setw(15) << left << setprecision(15) << goodsAmount
+         << setw(15) << left << setprecision(15) << goodsPrice * goodsAmount << endl;
 }
 
 int main()
@@ -89,7 +89,7 @@ int main()
     GOODS P, Q("H02", "Hang 2", "23/08/2021", "Toyota", 250000, 100);
 
     cout << "Nhap Thong Tin Cho Mat Hang P: ";
-    P.INPUT();
+    P.Input();
 
     cout << setw(15) << left << "MA HANG"
          << setw(50) << left << "TEN HANG"
@@ -99,8 +99,8 @@ int main()
          << setw(15) << left << "SO LUONG"
          << setw(15) << left << "THANH TIEN" << endl;
 
-    P.OUTPUT();
-    Q.OUTPUT();
+    P.Output();
+    Q.Output();
 
     return 0;
 }
