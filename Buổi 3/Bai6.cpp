@@ -4,15 +4,15 @@ using namespace std;
 class Math
 {
     public:
-        static int abs(int x);
+        static int absolute(int x);
         static int add(int x, int y);
         static int subtract(int x, int y);
-        static int min(int x, int y);
-        static int max(int x, int y);
-        static int pow(int x, int y);
+        static int minimum(int x, int y);
+        static int maximum(int x, int y);
+        static int power(int x, int y);
 };
 
-int Math::abs(int x)
+int Math::absolute(int x)
 {
     return (x >= 0 ? x : -x);
 }
@@ -27,17 +27,17 @@ int Math::subtract(int x, int y)
     return x - y;
 }
 
-int Math::min(int x, int y)
+int Math::minimum(int x, int y)
 {
     return (x >= y ? y : x);
 }
 
-int Math::max(int x, int y)
+int Math::maximum(int x, int y)
 {
     return (x >= y ? x : y);
 }
 
-int Math::pow(int x, int y)
+int Math::power(int x, int y)
 {
     int answer = 1;
 
@@ -51,11 +51,11 @@ int Math::pow(int x, int y)
 
 int main()
 {
-    cout << Math::abs(-3) << endl;
+    cout << Math::absolute(-3) << endl;
     cout << Math::add(-2, 5) << endl;
     cout << Math::subtract(5, 2) << endl;
-    cout << Math::min(35, 67) << endl;
-    cout << Math::max(35, 67) << endl;
-    cout << Math::pow(2, 9) << endl;     
+    cout << Math::minimum(35, 67) << endl;
+    cout << Math::maximum(35, 67) << endl;
+    cout << Math::power(2, 9) << endl;     
     return 0;
 }
